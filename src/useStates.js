@@ -1,4 +1,4 @@
-import { getStateValues } from "monostore/src";
+import { getStateValues, arrayDiff } from "monostore";
 import { useEffect, useRef, useState } from "react";
 
 const useEffectWithDynamicArray = useEffect;

@@ -1,6 +1,6 @@
-import { getStateValues } from "monostore/src";
+import { getStateValues } from "monostore";
 import { createElement } from "react";
-import useStates from "react-monostore/src/useStates";
+import useStates from "./useStates";
 
 export function AsyncRender({
   render,

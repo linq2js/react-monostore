@@ -1,5 +1,5 @@
 import { createElement, memo } from "react";
-import useStates from "react-monostore/src/useStates";
+import useStates from "./useStates";
 
 /**
  *
