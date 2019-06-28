@@ -1,0 +1,62 @@
+{
+  "name": "react-monostore",
+  "version": "0.0.1",
+  "description": "React bindings for monostore",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linq2js/react-monostore.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "state",
+    "management",
+    "state",
+    "manager",
+    "store",
+    "flux"
+  ],
+  "author": "linq2js",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linq2js/react-monostore/issues"
+  },
+  "homepage": "https://github.com/linq2js/react-monostore#readme",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@types/react": "^16.8.22",
+    "jest": "^24.8.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.8.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-loader": "^8.0.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "typescript": "^3.3.3"
+  }
+}
