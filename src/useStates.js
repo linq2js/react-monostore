@@ -1,4 +1,5 @@
 import { getStateValues, arrayDiff } from "monostore";
+import createStateStatusMonitor from "./createStateStatusMonitor";
 import { useEffect, useRef, useState } from "react";
 
 const useEffectWithDynamicArray = useEffect;
@@ -26,13 +27,19 @@ export default function useStates(...states) {
 
   useEffectWithDynamicArray(
     () => {
+      const asyncStates = statesForCache.filter(x => x.async);
+      const asyncStateStatusMonitor = createStateStatusMonitor(asyncStates);
       const checkForUpdates = () => {
         // do not rerender if component is unmount
         if (unmountRef.current) {
           return;
         }
         const nextValues = getStateValues(statesRef.current);
-        if (!hasMapperRef.current || arrayDiff(valuesRef.current, nextValues)) {
+        if (
+          !hasMapperRef.current ||
+          arrayDiff(valuesRef.current, nextValues) ||
+          asyncStateStatusMonitor.hasChange()
+        ) {
           valuesRef.current = nextValues;
           forceRerender({});
         }
