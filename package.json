@@ -1,6 +1,6 @@
 {
   "name": "react-monostore",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "React bindings for monostore",
   "main": "src/index.js",
   "scripts": {
@@ -69,7 +69,6 @@
     "typescript": "^3.3.3",
     "@testing-library/react": "^8.0.4",
     "@testing-library/react-hooks": "^1.0.4",
-    "react-test-renderer": "^16.8.6",
-    "monostore": "^0.0.7"
+    "react-test-renderer": "^16.8.6"
   }
 }
