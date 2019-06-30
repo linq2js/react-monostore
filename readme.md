@@ -222,3 +222,5 @@ render(<App />, document.getElementById("root"));
 ```
 
 State is smart enough to process synthetic event without any effort
+
+## [More examples](https://codesandbox.io/s/react-monostore-8xoxx)
