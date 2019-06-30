@@ -1,4 +1,4 @@
-import { arrayDiff } from "monostore";
+import { arrayEqual } from "monostore";
 
 export default function(states) {
   let statuses = getStatuses(states);
@@ -6,7 +6,7 @@ export default function(states) {
   return {
     hasChange() {
       const nextStatuses = getStatuses(states);
-      if (arrayDiff(statuses, nextStatuses)) {
+      if (arrayEqual(statuses, nextStatuses)) {
         statuses = nextStatuses;
         return true;
       }

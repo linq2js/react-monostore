@@ -1,4 +1,4 @@
-import { getStateValues, arrayDiff } from "monostore";
+import { getStateValues, arrayEqual } from "monostore";
 import createStateStatusMonitor from "./createStateStatusMonitor";
 import { useEffect, useRef, useState } from "react";
 
@@ -37,7 +37,7 @@ export default function useStates(...states) {
         const nextValues = getStateValues(statesRef.current);
         if (
           !hasMapperRef.current ||
-          arrayDiff(valuesRef.current, nextValues) ||
+          arrayEqual(valuesRef.current, nextValues) ||
           asyncStateStatusMonitor.hasChange()
         ) {
           valuesRef.current = nextValues;
