@@ -4,6 +4,24 @@ React bindings for monostore
 
 # Features
 
+|                             | monostore | redux |
+|-----------------------------|-----------|-------|
+| <Provider/>                 | No        | Yes   |
+| Action Dispatcher           | No        | Yes   |
+| Action Creator              | No        | Yes   |
+| Reducer                     | No        | Yes   |
+| Middleware                  | No        | Yes   |
+| connect()                   | No        | Yes   |
+| Async Action                | Yes       | No    |
+| Async State                 | Yes       | No    |
+| Computed State              | Yes       | No    |
+| Lazy State                  | Yes       | No    |
+| State dependency            | Yes       | No    |
+| Free Action Dispatching     | Yes       | No    |
+| Multiple Stores             | Yes       | No    |
+| State Mutation Helpers      | Yes       | No    |
+| Action Dispatching Tracking | Yes       | No    |
+
 # Table of contents
 
 ## Getting started
