@@ -6,7 +6,7 @@ React bindings for monostore
 
 |                             | monostore | redux |
 |-----------------------------|-----------|-------|
-| <Provider/>                 | No        | Yes   |
+| Provider element            | No        | Yes   |
 | Action Dispatcher           | No        | Yes   |
 | Action Creator              | No        | Yes   |
 | Reducer                     | No        | Yes   |
