@@ -5,7 +5,7 @@ React bindings for monostore
 # Features
 
 |                             | monostore | redux |
-|-----------------------------|-----------|-------|
+| --------------------------- | --------- | ----- |
 | Provider element            | No        | Yes   |
 | Action Dispatcher           | No        | Yes   |
 | Action Creator              | No        | Yes   |
@@ -23,6 +23,9 @@ React bindings for monostore
 | Action Dispatching Tracking | Yes       | No    |
 
 # Table of contents
+
+1. [Getting started](#getting-started)
+2. [Using monostore with React](#using-monostore-with-react)
 
 ## Getting started
 
