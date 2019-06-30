@@ -134,10 +134,10 @@ const App = () => {
   }
 
   return (
-    <>
+    <div>
       <input type="text" value={name} onChange={handleChange} />
       <p>Hello {name}</p>
-    </>
+    </div>
   );
 };
 
@@ -164,10 +164,10 @@ const App = () => {
   }
 
   return (
-    <>
+    <div>
       <input type="text" value={name} onChange={handleChange} />
       <p>Hello {name}</p>
-    </>
+    </div>
   );
 };
 
@@ -190,10 +190,10 @@ const App = () => {
   const [name] = useStates(NameState);
 
   return (
-    <>
+    <div>
       <input type="text" value={name} onChange={NameState} />
       <p>Hello {name}</p>
-    </>
+    </div>
   );
 };
 

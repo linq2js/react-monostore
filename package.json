@@ -1,6 +1,6 @@
 {
   "name": "react-monostore",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "React bindings for monostore",
   "main": "src/index.js",
   "scripts": {
@@ -13,8 +13,8 @@
   "keywords": [
     "react",
     "redux",
-    "state",
-    "management",
+    "state management",
+    "state manager",
     "state",
     "manager",
     "store",
