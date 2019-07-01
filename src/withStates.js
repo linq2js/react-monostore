@@ -8,7 +8,7 @@ import useStates from "./useStates";
  * @return {function(*=): Function}
  */
 
-export function withAsyncStates(stateMap, fallbackOrOptions) {
+export function withStates(stateMap, fallbackOrOptions) {
   if (
     typeof fallbackOrOptions === "function" ||
     typeof fallbackOrOptions === "boolean" ||
@@ -18,7 +18,7 @@ export function withAsyncStates(stateMap, fallbackOrOptions) {
     fallbackOrOptions = { fallback: fallbackOrOptions };
   }
 
-  const { fallback } = fallbackOrOptions;
+  const { fallback, useUpdaters = false } = fallbackOrOptions;
 
   const entries = Object.entries(stateMap || {});
   const states = entries.map(x => x[1]);
@@ -47,6 +47,16 @@ export function withAsyncStates(stateMap, fallbackOrOptions) {
 
       if (!allDone && fallback !== false) {
         return fallback ? createElement(fallback, props) : null;
+      }
+
+      if (useUpdaters) {
+        // generate updaters
+        entries.forEach(
+          entry =>
+            (newProps[
+              "update" + entry[0].charAt(0).toUpperCase() + entry[0].substr(1)
+            ] = entry[1])
+        );
       }
 
       Object.assign(newProps, props);
