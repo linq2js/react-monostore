@@ -25,7 +25,8 @@ React bindings for monostore
 # Table of contents
 
 1. [Getting started](#getting-started)
-2. [Using monostore with React](#using-monostore-with-react)
+1. [Using monostore with React](#using-monostore-with-react)
+1. [Playground](https://codesandbox.io/s/react-monostore-8xoxx)
 
 ## Getting started
 
@@ -221,6 +222,4 @@ const App = () => {
 render(<App />, document.getElementById("root"));
 ```
 
-State is smart enough to process synthetic event without any effort
-
-## [More examples](https://codesandbox.io/s/react-monostore-8xoxx)
+State is smart enough to process synthetic event without any effort.
