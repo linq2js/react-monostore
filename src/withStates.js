@@ -8,7 +8,7 @@ import useStates from "./useStates";
  * @return {function(*=): Function}
  */
 
-export function withStates(stateMap, fallbackOrOptions) {
+export default function withStates(stateMap, fallbackOrOptions) {
   if (
     typeof fallbackOrOptions === "function" ||
     typeof fallbackOrOptions === "boolean" ||

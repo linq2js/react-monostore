@@ -1,6 +1,6 @@
 {
   "name": "react-monostore",
-  "version": "0.0.32",
+  "version": "0.0.34",
   "description": "React bindings for monostore",
   "main": "src/index.js",
   "scripts": {

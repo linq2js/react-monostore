@@ -71,8 +71,10 @@ const Increase = createAction([CounterState], (counter, step = 1) =>
 );
 
 Increase(2);
-
 console.log(CounterState.value); // 3
+
+Increase();
+console.log(CounterState.value); // 4
 ```
 
 monostore supports async function by default
@@ -102,8 +104,8 @@ Increase(2).then(() => {
 Remember that an action returns exactly what you returned inside action body,
 it can be anything, primitive values, objects, promises
 
-If you find it difficult to mutate state with builtin getter and setter,
-monostore provided some useful helpers to mutate state
+If you feel it difficult to mutate state by using builtin getter and setter,
+monostore provided some useful helpers for you
 
 ```jsx harmony
 import { createState, createAction } from "monostore";
@@ -127,8 +129,10 @@ const Update = createAction(
     boolean.toggle(); // false
     array.push(4, 5, 6); // [1, 2, 3, 4, 5, 6]
     array.shift(); // [2, 3, 4, 5, 6]
+    // chaining calls
     array.unshift(-1, 1).pop(); // [-1, 1, 2, 3, 4, 5]
     object.set("done", false); // { text: "Todo", done: false }
+    object.prop('newProp').def(100); // { text: "Todo", done: false, newProp: 100 }
   }
 );
 
