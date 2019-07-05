@@ -9,13 +9,11 @@ export default function useStates(...states) {
   const unmountRef = useRef(false);
   const valuesRef = useRef();
   const statesRef = useRef();
-  const hasMapperRef = useRef(false);
   const statesForCache = states.map(x => (Array.isArray(x) ? x[0] : x));
   if (!valuesRef.current) {
     valuesRef.current = getStateValues(states);
   }
   statesRef.current = states;
-  hasMapperRef.current = states.some(x => Array.isArray(x));
 
   // get unmount status
   useEffect(
@@ -36,7 +34,6 @@ export default function useStates(...states) {
         }
         const nextValues = getStateValues(statesRef.current);
         if (
-          !hasMapperRef.current ||
           arrayEqual(valuesRef.current, nextValues) ||
           asyncStateStatusMonitor.hasChange()
         ) {
