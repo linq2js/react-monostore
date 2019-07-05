@@ -27,6 +27,7 @@ React bindings for monostore
 1. [Getting started](#getting-started)
 1. [Using monostore with React](#using-monostore-with-react)
 1. [Playground](https://codesandbox.io/s/react-monostore-8xoxx)
+1. [Performance Tests](#performance-tests)
 
 ## Getting started
 
@@ -227,3 +228,7 @@ render(<App />, document.getElementById("root"));
 ```
 
 State is smart enough to process synthetic event without any effort.
+
+## Performance Tests
+1. Monostore https://codesandbox.io/s/react-monostore-perf-todo-n5wz7
+1. Overmind https://codesandbox.io/s/react-overmind-perf-todo-c53qw
