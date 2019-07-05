@@ -9,6 +9,7 @@ export default function useStates(...states) {
   const unmountRef = useRef(false);
   const valuesRef = useRef();
   const statesRef = useRef();
+  const onUmountRef = useRef();
   const statesForCache = states.map(x => (Array.isArray(x) ? x[0] : x));
   if (!valuesRef.current) {
     valuesRef.current = getStateValues(states);
@@ -19,6 +20,7 @@ export default function useStates(...states) {
   useEffect(
     () => () => {
       unmountRef.current = true;
+      onUmountRef.current && onUmountRef.current();
     },
     []
   );
@@ -50,9 +52,9 @@ export default function useStates(...states) {
       // some async action may be done at this time
       checkForUpdates();
 
-      return () => {
+      return (onUmountRef.current = () => {
         statesForCache.forEach(state => state.unsubscribe(checkForUpdates));
-      };
+      });
     },
     // just run this effect once state list changed, has no effect if mapper changed
     statesForCache
