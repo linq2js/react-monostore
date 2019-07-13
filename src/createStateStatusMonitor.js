@@ -6,7 +6,7 @@ export default function(states) {
   return {
     hasChange() {
       const nextStatuses = getStatuses(states);
-      if (arrayEqual(statuses, nextStatuses)) {
+      if (!arrayEqual(statuses, nextStatuses)) {
         statuses = nextStatuses;
         return true;
       }
